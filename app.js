@@ -2,6 +2,8 @@ const express = require("express")
 const mongoose = require("mongoose")
 const cors = require("cors")
 const contactRoutes = require("./routes/contactRoutes")
+const userRoutes = require("./routes/userRoutes")
+
 
 const app = express()
 
@@ -14,6 +16,7 @@ app.get("/",(req,res)=>{
 })
 
 app.use("/api/contact",contactRoutes)
+app.use("/api/user",userRoutes)
 
 
 app.listen(5000,()=>{
